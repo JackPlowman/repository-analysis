@@ -25,3 +25,11 @@ jobs:
         uses: deepakputhraya/action-pr-title@v1.0.2
         with:
           allowed_prefixes: "feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: " # title should start with the given prefix
+  labeller:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v5
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/other-configurations/labeller.yml
+          sync-labels: true
