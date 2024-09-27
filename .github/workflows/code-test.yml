@@ -1,0 +1,38 @@
+name: Code Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  unit-test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Install Python 3.12 with Poetry Cache
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+          cache: "poetry"
+
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+
+      - name: Install Poetry Dependencies
+        run: just install
+
+      - name: Run Unit Tests
+        run: just unit-test
