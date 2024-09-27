@@ -3,8 +3,8 @@
 # ------------------------------------------------------------------------------
 
 clean:
-    just analyser::clean-repos
-    just analyser::clean-generated-files
+    just clean-repos
+    just clean-generated-files
     find . \( \
       -name '__pycache__' -o \
       -name '.coverage' -o \
@@ -28,16 +28,16 @@ install:
     poetry install
 
 run:
-    poetry run python -m application
+    poetry run python -m analyser
 
 run-with-defaults:
-    DEBUG=true REPOSITORY_OWNER=JackPlowman poetry run python -m application
+    DEBUG=true REPOSITORY_OWNER=JackPlowman poetry run python -m analyser
 
 unit-test:
-    poetry run pytest application --cov=application --cov-report=xml
+    poetry run pytest analyser --cov=analyser --cov-report=xml
 
 unit-test-debug:
-    poetry run pytest application --cov=application --cov-report=xml -vvvv
+    poetry run pytest analyser --cov=analyser --cov-report=xml -vvvv
 
 # ------------------------------------------------------------------------------
 # Ruff - # Set up red-knot when it's ready
@@ -65,3 +65,33 @@ ruff-format-fix:
 
 vulture:
     poetry run vulture application
+
+# ------------------------------------------------------------------------------
+# Prettier
+# ------------------------------------------------------------------------------
+
+prettier-check:
+    prettier . --check
+
+prettier-format:
+    prettier . --check --write
+
+# ------------------------------------------------------------------------------
+# Justfile
+# ------------------------------------------------------------------------------
+
+format:
+    just --fmt --unstable
+
+format-check:
+    just --fmt --check --unstable
+
+# ------------------------------------------------------------------------------
+# Git Hooks
+# ------------------------------------------------------------------------------
+
+# Install pre commit hook to run on all commits
+install-git-hooks:
+    cp -f githooks/pre-commit .git/hooks/pre-commit
+    cp -f githooks/post-commit .git/hooks/post-commit
+    chmod ug+x .git/hooks/*
