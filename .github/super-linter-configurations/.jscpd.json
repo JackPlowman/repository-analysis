@@ -1,0 +1,10 @@
+{
+  "minLines": 5,
+  "maxLines": 500,
+  "maxSize": "30kb",
+  "minTokens": 50,
+  "ignore": [".github/workflows/*.yml"],
+  "mode": "mild",
+  "ignoreCase": false,
+  "gitignore": false
+}
