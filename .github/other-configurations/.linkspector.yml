@@ -1,0 +1,7 @@
+dirs:
+  - ./
+  - ./docs
+excludedFiles:
+  - ./CHANGELOG.md
+aliveStatusCodes:
+  - 200
