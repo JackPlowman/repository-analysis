@@ -1,0 +1,35 @@
+# labels auto assigned to PR, keep in sync with labels.yml
+documentation:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["README.md", "docs/**"]
+dependencies:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["**/poetry.lock", "package-lock.json"]
+      - head-branch: ["^dependabot"]
+python:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["*.py", "**/*.py"]
+just:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["Justfile", "**/*.just"]
+shell:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["**/*.sh"]
+github_actions:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              [".github/workflows/*", ".github/workflows/**/*"]
+analyser:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["analyser/**"]
+git_hooks:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ["githooks/**"]
