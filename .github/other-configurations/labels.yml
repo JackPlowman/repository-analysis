@@ -1,0 +1,67 @@
+# Default GitHub labels
+- color: d73a4a
+  name: bug
+  description: Something isn't working
+- color: 0075ca
+  name: documentation
+  description: Improvements or additions to documentation
+- color: 0366d6
+  name: dependencies
+  description: Pull requests that update a dependency file
+- color: cfd3d7
+  name: duplicate
+  description: This issue or pull request already exists
+- color: a2eeef
+  name: enhancement
+  description: Functionality that enhances existing features
+- color: 7057ff
+  name: good first issue
+  description: Good for newcomers
+- color: 008672
+  name: help wanted
+  description: We are looking for community help
+- color: e4e669
+  name: invalid
+  description: This doesn't seem right
+- color: d876e3
+  name: question
+  description: Further information is requested
+- color: d876e3
+  name: wontfix
+  description: The issue is expected and will not be fixed
+# Release Please
+- color: ededed
+  name: "autorelease: pending"
+  description:
+- color: ededed
+  name: "autorelease: tagged"
+  description:
+- color: ededed
+  name: "autorelease: triggered"
+  description:
+- color: ededed
+  name: "autorelease: snapshot"
+  description:
+- color: ededed
+  name: "autorelease: published"
+  description:
+# Languages
+- color: 2b67c6
+  name: python
+  description: Pull requests that update Python code
+- color: 000000
+  name: github_actions
+  description: Pull requests that update GitHub Actions code
+- color: 66A615
+  name: just
+  description: Pull requests that update Just code
+- color: 00ff44
+  name: shell
+  description: Pull requests that update Shell code
+# Components
+- color: f200f2
+  name: analyser
+  description: Pull requests that update analyser code
+- color: ff0073
+  name: git_hooks
+  description: Pull requests that update git hooks
