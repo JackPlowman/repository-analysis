@@ -1,0 +1,22 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    commit-message:
+      prefix: "deps(github-actions)"
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    commit-message:
+      prefix: "deps(python)"
+    schedule:
+      interval: "monthly"
+    target-branch: "main"
+    groups:
+      python:
+        patterns:
+          - "*"
