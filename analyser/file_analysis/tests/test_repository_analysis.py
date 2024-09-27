@@ -1,8 +1,8 @@
 from unittest.mock import MagicMock, patch
 
-from analyser.application.file_analysis.repository_analysis import RepositoryAnalysis, analyse_repository
+from analyser.file_analysis.repository_analysis import RepositoryAnalysis, analyse_repository
 
-FILE_PATH = "analyser.application.file_analysis.repository_analysis"
+FILE_PATH = "analyser.file_analysis.repository_analysis"
 
 
 def test_repository_analysis() -> None:

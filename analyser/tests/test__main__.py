@@ -2,9 +2,9 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from analyser.application.__main__ import main
+from analyser.__main__ import main
 
-FILE_PATH = "analyser.application.__main__"
+FILE_PATH = "analyser.__main__"
 
 
 @patch(f"{FILE_PATH}.create_statistics")

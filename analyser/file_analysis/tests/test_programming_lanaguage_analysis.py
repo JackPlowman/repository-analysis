@@ -2,12 +2,12 @@ from unittest.mock import MagicMock, patch
 
 from pygments.util import ClassNotFound
 
-from analyser.application.file_analysis.programming_language_analysis import (
+from analyser.file_analysis.programming_language_analysis import (
     analyse_programming_languages,
     guess_language_from_file,
 )
 
-FILE_PATH = "analyser.application.file_analysis.programming_language_analysis"
+FILE_PATH = "analyser.file_analysis.programming_language_analysis"
 
 
 @patch(f"{FILE_PATH}.guess_language_from_file")

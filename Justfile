@@ -48,23 +48,23 @@ ruff-fix:
     just analyser::ruff-format-fix
 
 ruff-lint:
-    poetry run ruff check application
+    poetry run ruff check analyser
 
 ruff-lint-fix:
-    poetry run ruff check application --fix
+    poetry run ruff check analyser --fix
 
 ruff-format:
-    poetry run ruff format --check application
+    poetry run ruff format --check analyser
 
 ruff-format-fix:
-    poetry run ruff format application
+    poetry run ruff format analyser
 
 # ------------------------------------------------------------------------------
 # Other Python Tools
 # ------------------------------------------------------------------------------
 
 vulture:
-    poetry run vulture application
+    poetry run vulture analyser
 
 # ------------------------------------------------------------------------------
 # Prettier

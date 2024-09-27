@@ -17,8 +17,8 @@ pandas = "^2.2.2"
 [tool.poetry.group.dev.dependencies]
 pytest = "8.3.3"
 pytest-cov = "5.0.0"
-ruff = "^0.6.5"
-vulture = "2.11"
+ruff = "^0.6.8"
+vulture = "^2.12"
 
 [build-system]
 requires = ["poetry-core"]
@@ -38,7 +38,7 @@ ignore = [
   "PLR2004", # Ignore magic value
   "D104",    # Ignore missing docstring in public package
   "D100",    # Ignore missing docstring in public module
-  "T201",    # Ignore print statement (until we have a logger)
+  "N999",    # Ignore invalid module name
 ]
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.

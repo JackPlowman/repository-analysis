@@ -1,8 +1,8 @@
 from unittest.mock import MagicMock, patch
 
-from analyser.application.statistics import create_repository_statistics, create_statistics
+from analyser.statistics import create_repository_statistics, create_statistics
 
-FILE_PATH = "analyser.application.statistics"
+FILE_PATH = "analyser.statistics"
 
 
 @patch(f"{FILE_PATH}.retrieve_repositories")

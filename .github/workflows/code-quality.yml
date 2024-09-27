@@ -37,3 +37,36 @@ jobs:
           VALIDATE_PYTHON_PYLINT: false
           VALIDATE_PYTHON_RUFF: false
           VALIDATE_PYTHON_PYINK: false
+
+  check-python-code-format-and-quality:
+    name: Check Python Code Format and Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Install Python 3.12 with Poetry Cache
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+          cache: "poetry"
+
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+
+      - name: Install Poetry Dependencies
+        run: just install
+
+      - name: Check Python Code Quality (Ruff)
+        run: just ruff-lint
+
+      - name: Check Python Code Format (Ruff)
+        run: just ruff-format
+
+      - name: Check Python Code for Dead Code (Vulture)
+        run: just vulture
