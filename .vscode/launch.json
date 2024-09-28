@@ -1,0 +1,23 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+  // To get python interpreter path use `poetry debug info`
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Analyser",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "analyser",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "DEBUG": "true",
+        "REPOSITORY_OWNER": "JackPlowman"
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
