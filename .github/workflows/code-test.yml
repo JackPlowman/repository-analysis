@@ -36,3 +36,38 @@ jobs:
 
       - name: Run Unit Tests
         run: just unit-test
+
+  validate-schema:
+    name: Validate Schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Install Python 3.12 with Poetry Cache
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+          cache: "poetry"
+
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+
+      - name: Install Poetry Dependencies
+        run: just install
+
+      - name: Run Analyser
+        env:
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: just run
+
+      - name: Copy generated files to github pages folder
+        run: cp -r statistics/*.json test/schema_validation
+
+      - name: Validate Schema
+        run: just validate-schema
