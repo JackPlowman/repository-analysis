@@ -39,8 +39,11 @@ unit-test:
 unit-test-debug:
     poetry run pytest analyser --cov=analyser --cov-report=xml -vvvv
 
+validate-schema:
+    poetry run check-jsonschema --schemafile test/schema_validation/repository_statistics_schema.json test/schema_validation/repository_statistics.json
+
 # ------------------------------------------------------------------------------
-# Ruff - # Set up red-knot when it's ready
+# Ruff - Set up red-knot when it's ready
 # ------------------------------------------------------------------------------
 
 ruff-fix:

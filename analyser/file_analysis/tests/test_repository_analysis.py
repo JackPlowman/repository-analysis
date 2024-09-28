@@ -25,7 +25,7 @@ def test_analyse_repository(
     mock_repository_languages: MagicMock,
 ) -> None:
     # Arrange
-    path_to_repo = "test"
+    path_to_repo = "tester"
     # Act
     response = analyse_repository(path_to_repo)
     # Assert
