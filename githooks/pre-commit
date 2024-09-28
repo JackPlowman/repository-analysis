@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e +x
+
+# shellcheck disable=SC2045,SC2028,SC2086,SC2206,SC2128
+for script in $(ls -1 githooks/pre-commit-scripts/*.sh 2>/dev/null); do
+  ts=$SECONDS
+  echo "Running githook: $script"
+  bash $script
+  te=($SECONDS - $ts)
+  echo "Script Took (${te}s)"
+done
+
+printf "pre-commit completed successfully"
