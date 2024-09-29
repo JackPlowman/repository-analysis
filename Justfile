@@ -34,10 +34,10 @@ run-with-defaults:
     DEBUG=true REPOSITORY_OWNER=JackPlowman poetry run python -m analyser
 
 unit-test:
-    poetry run pytest analyser --cov=analyser --cov-report=xml
+    poetry run pytest analyser --cov=. --cov-report=xml
 
 unit-test-debug:
-    poetry run pytest analyser --cov=analyser --cov-report=xml -vvvv
+    poetry run pytest analyser --cov=. --cov-report=xml -vvvv
 
 validate-schema:
     poetry run check-jsonschema --schemafile test/schema_validation/repository_statistics_schema.json test/schema_validation/repository_statistics.json
