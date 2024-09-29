@@ -37,6 +37,7 @@ jobs:
           VALIDATE_PYTHON_PYLINT: false
           VALIDATE_PYTHON_RUFF: false
           VALIDATE_PYTHON_PYINK: false
+          VALIDATE_NATURAL_LANGUAGE: false
 
   check-python-code-format-and-quality:
     name: Check Python Code Format and Quality
