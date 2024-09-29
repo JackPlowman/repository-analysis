@@ -2,11 +2,11 @@ import git
 from pandas import DataFrame
 from structlog import get_logger, stdlib
 
-from .catalogued_repository import CataloguedRepository
-from .commits.commits import get_commits
-from .file_analysis.repository_analysis import analyse_repository
-from .utils.github_interactions import clone_repo, retrieve_repositories
-from .utils.repository_actions import remove_excluded_files
+from analyser.catalogued_repository import CataloguedRepository
+from analyser.commits.commits import get_commits
+from analyser.file_analysis.repository_analysis import analyse_repository
+from analyser.utils.github_interactions import clone_repo, retrieve_repositories
+from analyser.utils.repository_actions import remove_excluded_files
 
 logger: stdlib.BoundLogger = get_logger()
 
@@ -20,7 +20,7 @@ def create_statistics() -> None:
     # Create statistics for each repository
     for repository in repositories:
         owner_name, repository_name = repository.owner.login, repository.name
-        # Clone the repository to analyser/cloned_repositories
+        # Clone the repository to cloned_repositories
         path = clone_repo(owner_name, repository_name)
         # Create statistics for the repository
         catalogued_repository = create_repository_statistics(repository_name, path)
