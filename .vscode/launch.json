@@ -14,7 +14,7 @@
       "cwd": "${workspaceFolder}",
       "env": {
         "DEBUG": "true",
-        "REPOSITORY_OWNER": "JackPlowman"
+        "repository_owner": "JackPlowman"
       },
       "console": "integratedTerminal",
       "justMyCode": true

@@ -31,7 +31,7 @@ run:
     poetry run python -m analyser
 
 run-with-defaults:
-    DEBUG=true REPOSITORY_OWNER=JackPlowman poetry run python -m analyser
+    DEBUG=true repository_owner=JackPlowman poetry run python -m analyser
 
 unit-test:
     poetry run pytest analyser --cov=. --cov-report=xml
@@ -52,7 +52,7 @@ docker-build:
 
 docker-run:
     docker run \
-      --env REPOSITORY_OWNER=JackPlowman \
+      --env repository_owner=JackPlowman \
       --volume "$(pwd)/statistics:/statistics" \
       --rm jackplowman/github-stats-analyser:latest
 

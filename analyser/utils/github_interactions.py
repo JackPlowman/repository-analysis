@@ -36,11 +36,11 @@ def retrieve_repositories() -> PaginatedList[Repository]:
     Returns:
         PaginatedList[Repository]: The list of repositories.
     """
-    repository_owner = getenv("REPOSITORY_OWNER", "")
+    repository_owner = getenv("repository_owner", "")
     if repository_owner == "":
-        msg = "REPOSITORY_OWNER environment variable is not set."
+        msg = "repository_owner environment variable is not set."
         raise ValueError(msg)
-    token = getenv("GITHUB_TOKEN", "")
+    token = getenv("github_token", "")
     if token == "":
         github = Github()
         logger.debug("Using unauthenticated GitHub API")

@@ -1,0 +1,18 @@
+name: "GitHub Stats Analyser"
+description: "Analyse GitHub and generate statistics for a user's repositories"
+author: "Jack Plowman"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+inputs:
+  github_token:
+    description: "The GitHub token"
+    required: false
+    default: ${{ github.token }}
+  repository_owner:
+    description: "The GitHub repository owner"
+    required: true
+
+branding:
+  icon: "code"
+  color: "black"

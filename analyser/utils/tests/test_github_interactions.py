@@ -44,7 +44,7 @@ def test_retrieve_repositories__unauthenticated(mock_getenv: MagicMock, mock_git
     repositories = retrieve_repositories()
     # Assert
     mock_github.assert_called_once_with()
-    mock_getenv.assert_has_calls([call("REPOSITORY_OWNER", ""), call("GITHUB_TOKEN", "")])
+    mock_getenv.assert_has_calls([call("repository_owner", ""), call("github_token", "")])
     assert repositories == search_return
 
 
@@ -62,7 +62,7 @@ def test_retrieve_repositories__authenticated(mock_getenv: MagicMock, mock_githu
     repositories = retrieve_repositories()
     # Assert
     mock_github.assert_called_once_with(token)
-    mock_getenv.assert_has_calls([call("REPOSITORY_OWNER", ""), call("GITHUB_TOKEN", "")])
+    mock_getenv.assert_has_calls([call("repository_owner", ""), call("github_token", "")])
     assert repositories == search_return
 
 
@@ -72,8 +72,8 @@ def test_retrieve_repositories__no_repository_owner(mock_getenv: MagicMock, mock
     # Arrange
     mock_getenv.return_value = ""
     # Act
-    with pytest.raises(ValueError, match="REPOSITORY_OWNER environment variable is not set."):
+    with pytest.raises(ValueError, match="repository_owner environment variable is not set."):
         retrieve_repositories()
     # Assert
     mock_github.assert_not_called()
-    mock_getenv.assert_called_once_with("REPOSITORY_OWNER", "")
+    mock_getenv.assert_called_once_with("repository_owner", "")
