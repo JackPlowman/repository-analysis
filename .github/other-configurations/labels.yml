@@ -58,6 +58,9 @@
 - color: 00ff44
   name: shell
   description: Pull requests that update Shell code
+- color: 0373fc
+  name: docker
+  description: Pull requests that update Docker code
 # Components
 - color: f200f2
   name: analyser
