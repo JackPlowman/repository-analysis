@@ -5,7 +5,7 @@ FROM python:3.12-alpine
 WORKDIR /
 
 RUN mkdir -p /statistics && \
-  apk add git=2.45.2-r0
+  apk add git=2.45.2-r0 --no-cache
 
 COPY pyproject.toml poetry.lock ./
 
