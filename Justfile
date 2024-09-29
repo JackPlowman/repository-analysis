@@ -42,9 +42,19 @@ unit-test-debug:
 validate-schema:
     poetry run check-jsonschema --schemafile test/schema_validation/repository_statistics_schema.json test/schema_validation/repository_statistics.json
 
+# ------------------------------------------------------------------------------
+# Docker
+# ------------------------------------------------------------------------------
+
 # Build the Docker image
 docker-build:
     docker build -t jackplowman/github-stats-analyser:latest .
+
+docker-run:
+    docker run \
+      --env REPOSITORY_OWNER=JackPlowman \
+      --volume "$(pwd)/statistics:/statistics" \
+      --rm jackplowman/github-stats-analyser:latest
 
 # ------------------------------------------------------------------------------
 # Ruff - Set up red-knot when it's ready
