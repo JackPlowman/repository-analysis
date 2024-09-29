@@ -21,12 +21,12 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnType": true,
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports.ruff": "always",
       "source.fixAll.ruff": "always",
       "source.convertImportFormat": "always"
     },
     "editor.wordBasedSuggestions": "allDocuments"
-  }
+  },
+  "editor.formatOnSave": true
 }
