@@ -7,8 +7,7 @@ WORKDIR /
 RUN mkdir -p /statistics && \
   apk add --no-cache git=2.45.2-r0
 
-COPY run.sh /
-RUN chmod +x /run.sh
+COPY --chmod=755 run.sh run.sh
 
 COPY pyproject.toml poetry.lock /
 
@@ -17,4 +16,4 @@ RUN pip install --no-cache-dir poetry==1.8.3 \
 
 ENV PYTHONPATH=/
 
-ENTRYPOINT [ "sh", "run.sh" ]
+ENTRYPOINT [ "/run.sh" ]
