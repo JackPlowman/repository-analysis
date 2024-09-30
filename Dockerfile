@@ -12,9 +12,6 @@ COPY pyproject.toml poetry.lock ./
 RUN pip install --no-cache-dir poetry==1.8.3 \
   && poetry install --no-dev
 
-COPY analyser ./analyser
-
-RUN chmod +x analyser
 ENV PYTHONPATH=/
 
 ENTRYPOINT [ "poetry", "run", "python", "-m", "analyser" ]

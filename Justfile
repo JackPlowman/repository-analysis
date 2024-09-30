@@ -54,6 +54,8 @@ docker-run:
     docker run \
       --env repository_owner=JackPlowman \
       --volume "$(pwd)/statistics:/statistics" \
+      --volume "$(pwd)/cloned_repositories:/cloned_repositories" \
+      --volume "$(pwd)/analyser:/analyser" \
       --rm jackplowman/github-stats-analyser:latest
 
 # ------------------------------------------------------------------------------
