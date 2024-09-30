@@ -10,7 +10,7 @@ RUN mkdir -p /statistics && \
 
 COPY --chmod=755 run.sh run.sh
 
-COPY pyproject.toml poetry.lock analyser/ ./
+COPY pyproject.toml poetry.lock analyser ./
 
 RUN pip install --no-cache-dir poetry==1.8.3 \
   && poetry install --no-dev
