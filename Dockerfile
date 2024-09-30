@@ -7,11 +7,14 @@ WORKDIR /
 RUN mkdir -p /statistics && \
   apk add --no-cache git=2.45.2-r0
 
-COPY pyproject.toml poetry.lock ./
+COPY run.sh /
+RUN chmod +x /run.sh
+
+COPY pyproject.toml poetry.lock /
 
 RUN pip install --no-cache-dir poetry==1.8.3 \
   && poetry install --no-dev
 
 ENV PYTHONPATH=/
 
-ENTRYPOINT [ "poetry", "run", "python", "-m", "analyser" ]
+ENTRYPOINT [ "sh", "run.sh" ]
