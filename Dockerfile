@@ -5,7 +5,7 @@ FROM python:3.12-alpine
 WORKDIR /
 
 RUN mkdir -p /statistics && \
-  apk add git=2.45.2-r0 --no-cache
+  apk add --no-cache git=2.45.2-r0
 
 COPY pyproject.toml poetry.lock ./
 
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir poetry==1.8.3 \
 
 COPY analyser ./analyser
 
-CMD [ "poetry", "run", "python", "-m", "analyser" ]
+ENTRYPOINT [ "poetry", "run", "python", "-m", "analyser" ]
