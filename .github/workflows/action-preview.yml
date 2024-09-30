@@ -16,10 +16,3 @@ jobs:
         uses: JackPlowman/github-stats-analyser@main
         with:
           repository_owner: ${{ github.repository_owner }}
-
-      - name: Check Files
-        run: |
-          ls -la
-          ls -la statistics
-          ls -la cloned_repositories
-          ls -la analyser

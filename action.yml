@@ -4,6 +4,8 @@ author: "Jack Plowman"
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    GITHUB_ACTION: "true"
 inputs:
   github_token:
     description: "The GitHub token"
