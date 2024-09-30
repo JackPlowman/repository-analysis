@@ -72,7 +72,7 @@ jobs:
 
       - name: Run Analyser
         env:
-          repository_owner: ${{ github.repository_owner }}
+          INPUT_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: just run
 
       - name: Copy generated files to github pages folder

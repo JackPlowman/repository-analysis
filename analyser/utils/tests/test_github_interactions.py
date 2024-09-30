@@ -16,7 +16,8 @@ def test_clone_repo(mock_repo: MagicMock, mock_path: MagicMock) -> None:
     clone_repo("JackPlowman", "github-stats-prototype")
     # Assert
     mock_repo.clone_from.assert_called_once_with(
-        "https://github.com/JackPlowman/github-stats-prototype.git", mock_path.return_value
+        "https://github.com/JackPlowman/github-stats-prototype.git",
+        mock_path.return_value,
     )
 
 
@@ -44,7 +45,7 @@ def test_retrieve_repositories__unauthenticated(mock_getenv: MagicMock, mock_git
     repositories = retrieve_repositories()
     # Assert
     mock_github.assert_called_once_with()
-    mock_getenv.assert_has_calls([call("repository_owner", ""), call("github_token", "")])
+    mock_getenv.assert_has_calls([call("INPUT_REPOSITORY_OWNER", ""), call("github_token", "")])
     assert repositories == search_return
 
 
@@ -62,7 +63,7 @@ def test_retrieve_repositories__authenticated(mock_getenv: MagicMock, mock_githu
     repositories = retrieve_repositories()
     # Assert
     mock_github.assert_called_once_with(token)
-    mock_getenv.assert_has_calls([call("repository_owner", ""), call("github_token", "")])
+    mock_getenv.assert_has_calls([call("INPUT_REPOSITORY_OWNER", ""), call("github_token", "")])
     assert repositories == search_return
 
 
@@ -76,4 +77,4 @@ def test_retrieve_repositories__no_repository_owner(mock_getenv: MagicMock, mock
         retrieve_repositories()
     # Assert
     mock_github.assert_not_called()
-    mock_getenv.assert_called_once_with("repository_owner", "")
+    mock_getenv.assert_called_once_with("INPUT_REPOSITORY_OWNER", "")

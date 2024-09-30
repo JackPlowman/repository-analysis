@@ -31,7 +31,7 @@ run:
     poetry run python -m analyser
 
 run-with-defaults:
-    DEBUG=true repository_owner=JackPlowman poetry run python -m analyser
+    DEBUG=true INPUT_REPOSITORY_OWNER=JackPlowman poetry run python -m analyser
 
 unit-test:
     poetry run pytest analyser --cov=. --cov-report=xml
@@ -52,7 +52,7 @@ docker-build:
 
 docker-run:
     docker run \
-      --env repository_owner=JackPlowman \
+      --env INPUT_REPOSITORY_OWNER=JackPlowman \
       --volume "$(pwd)/statistics:/statistics" \
       --volume "$(pwd)/cloned_repositories:/cloned_repositories" \
       --volume "$(pwd)/analyser:/analyser" \
