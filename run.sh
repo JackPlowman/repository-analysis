@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Echo cwd
+echo "Current working directory: $(pwd)"
+
 # Show files
 ls -la
 

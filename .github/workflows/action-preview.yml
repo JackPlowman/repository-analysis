@@ -12,7 +12,14 @@ jobs:
     name: Action Preview
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Stats Analyser
+      - name: Run GitHub Stats Analyser
         uses: JackPlowman/github-stats-analyser@main
         with:
           repository_owner: ${{ github.repository_owner }}
+
+      - name: Check Files
+        run: |
+          ls -la
+          ls -la statistics
+          ls -la cloned_repositories
+          ls -la analyser
