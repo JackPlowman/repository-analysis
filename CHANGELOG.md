@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.0.1](https://github.com/JackPlowman/github-stats-analyser/compare/v1.0.0...v1.0.1) (2024-10-01)
+
+
+### 🐛 Bugfixes
+
+* Fix GitHub Action Run Error ([#81](https://github.com/JackPlowman/github-stats-analyser/issues/81)) ([5f09b1e](https://github.com/JackPlowman/github-stats-analyser/commit/5f09b1e6c3aeb45f5b37c0b33c24aa54a923db00))
+
+
+### 🧰 Maintenance
+
+* Add Action Preview workflow ([#85](https://github.com/JackPlowman/github-stats-analyser/issues/85)) ([1920a47](https://github.com/JackPlowman/github-stats-analyser/commit/1920a479de42b22e89c7d03bd4f6edece245def4)), closes [#86](https://github.com/JackPlowman/github-stats-analyser/issues/86)
+* Copy output file to GitHub runner ([#103](https://github.com/JackPlowman/github-stats-analyser/issues/103)) ([be39862](https://github.com/JackPlowman/github-stats-analyser/commit/be39862f1d638395bb56b0d48dbff19cf47173b2)), closes [#104](https://github.com/JackPlowman/github-stats-analyser/issues/104)
+* Fix analyser directory copy in Dockerfile ([#96](https://github.com/JackPlowman/github-stats-analyser/issues/96)) ([291fbec](https://github.com/JackPlowman/github-stats-analyser/commit/291fbec9736ad8f795db5c56178a0619fa2d3469)), closes [#95](https://github.com/JackPlowman/github-stats-analyser/issues/95)
+* Fix script not found ([#91](https://github.com/JackPlowman/github-stats-analyser/issues/91)) ([74547b7](https://github.com/JackPlowman/github-stats-analyser/commit/74547b7d888a6e35080f1cde11bba925ea1ffcce)), closes [#92](https://github.com/JackPlowman/github-stats-analyser/issues/92)
+* Optimize Dockerfile and update run script ([#99](https://github.com/JackPlowman/github-stats-analyser/issues/99)) ([6c0350a](https://github.com/JackPlowman/github-stats-analyser/commit/6c0350a3b6143d88ea3e4b9287d6b2acc85200ff)), closes [#100](https://github.com/JackPlowman/github-stats-analyser/issues/100)
+* Remove debug commands from run script ([#106](https://github.com/JackPlowman/github-stats-analyser/issues/106)) ([ef17c68](https://github.com/JackPlowman/github-stats-analyser/commit/ef17c686f14ba85dc6469066d72fb13aca4819e7)), closes [#105](https://github.com/JackPlowman/github-stats-analyser/issues/105)
+* Simplify Dockerfile and update entrypoint ([#88](https://github.com/JackPlowman/github-stats-analyser/issues/88)) ([daf607c](https://github.com/JackPlowman/github-stats-analyser/commit/daf607c1d6c6102047578a38a44e3002f2e3b051)), closes [#87](https://github.com/JackPlowman/github-stats-analyser/issues/87)
+* Update Dockerfile and add run script ([#89](https://github.com/JackPlowman/github-stats-analyser/issues/89)) ([3a647db](https://github.com/JackPlowman/github-stats-analyser/commit/3a647dbc1dd512a056fdb972ce35f7772f3ca2f9)), closes [#90](https://github.com/JackPlowman/github-stats-analyser/issues/90)
+* Update Dockerfile and enhance GitHub Action workflow ([#94](https://github.com/JackPlowman/github-stats-analyser/issues/94)) ([68fe555](https://github.com/JackPlowman/github-stats-analyser/commit/68fe5553b1ddc54a4d98fccab8c99fd9c56a2f5e)), closes [#93](https://github.com/JackPlowman/github-stats-analyser/issues/93)
+* Update Dockerfile and enhance run script ([#97](https://github.com/JackPlowman/github-stats-analyser/issues/97)) ([0d517ce](https://github.com/JackPlowman/github-stats-analyser/commit/0d517ceb6736b5dc70de9c26a9763522133761d8)), closes [#98](https://github.com/JackPlowman/github-stats-analyser/issues/98)
+* Update Dockerfile permissions and Python path ([#84](https://github.com/JackPlowman/github-stats-analyser/issues/84)) ([7910d75](https://github.com/JackPlowman/github-stats-analyser/commit/7910d756691a3146238664c8cf4018b8f2b44689)), closes [#86](https://github.com/JackPlowman/github-stats-analyser/issues/86)
+* Update repository owner environment variable ([#102](https://github.com/JackPlowman/github-stats-analyser/issues/102)) ([c9aa465](https://github.com/JackPlowman/github-stats-analyser/commit/c9aa46571b30d08a40467d0d26d7b2c414b2522e)), closes [#101](https://github.com/JackPlowman/github-stats-analyser/issues/101)
+
 ## 1.0.0 (2024-09-29)
 
 
