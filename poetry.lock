@@ -210,13 +210,13 @@ files = [
 
 [[package]]
 name = "check-jsonschema"
-version = "0.29.2"
+version = "0.29.3"
 description = "A jsonschema CLI and pre-commit hook"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "check_jsonschema-0.29.2-py3-none-any.whl", hash = "sha256:6470ff23d848a26b1e77db1141827002f5fff3138295d3345c19b2410d345aa0"},
-    {file = "check_jsonschema-0.29.2.tar.gz", hash = "sha256:a633aae257f16e5298853edf18fd30ab94878fd88bd6b91902cd7158151c675d"},
+    {file = "check_jsonschema-0.29.3-py3-none-any.whl", hash = "sha256:58d0486e951811744549fa40411e64a6d74bd88c94d9d7fd061e5bf635ff689c"},
+    {file = "check_jsonschema-0.29.3.tar.gz", hash = "sha256:3838b6d6da536496516d08a1779e7a11737628f84b444fe95d397b96fc8cc73f"},
 ]
 
 [package.dependencies]
@@ -228,7 +228,7 @@ requests = "<3.0"
 
 [package.extras]
 dev = ["click-type-test (==0.0.7)", "coverage (<8)", "pytest (<9)", "pytest-xdist (<4)", "responses (==0.25.3)"]
-docs = ["furo (==2024.7.18)", "sphinx (<8)", "sphinx-issues (<5)"]
+docs = ["furo (==2024.8.6)", "sphinx (<9)", "sphinx-issues (<5)"]
 
 [[package]]
 name = "click"
@@ -1355,4 +1355,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "f253cf08da2bbdf78148049f30a22435822e59967066064e6342aa690406abe7"
+content-hash = "1ba8dc2a3f040e49f1a0ea5b54c1af1953fee4f85116c35e6c90139c7661e60b"
