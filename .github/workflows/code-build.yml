@@ -27,6 +27,3 @@ jobs:
 
       - name: Build Docker Image
         run: just docker-build
-
-      - name: Run Docker Image
-        run: just docker-run

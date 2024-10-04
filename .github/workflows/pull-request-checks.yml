@@ -26,6 +26,7 @@ jobs:
         with:
           allowed_prefixes: "feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: " # title should start with the given prefix
   labeller:
+    name: Labeller
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v5

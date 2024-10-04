@@ -70,13 +70,13 @@ jobs:
       - name: Install Poetry Dependencies
         run: just install
 
-      - name: Run Analyser
-        env:
-          INPUT_REPOSITORY_OWNER: ${{ github.repository_owner }}
-        run: just run
+      - name: Run GitHub Stats Analyser
+        uses: ./
+        with:
+          repository_owner: ${{ github.repository_owner }}
 
       - name: Copy generated files to github pages folder
-        run: cp -r statistics/*.json test/schema_validation
+        run: cp repository_statistics.json test/schema_validation
 
       - name: Validate Schema
         run: just validate-schema

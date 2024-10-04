@@ -14,7 +14,6 @@ inputs:
   repository_owner:
     description: "The GitHub repository owner"
     required: true
-
 branding:
-  icon: "code"
-  color: "black"
+  color: black
+  icon: code
