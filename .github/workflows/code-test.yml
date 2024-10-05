@@ -49,7 +49,7 @@ jobs:
       - name: Run GitHub Stats Analyser
         uses: ./
         with:
-          repository_owner: ${{ github.repository_owner }}
+          REPOSITORY_OWNER: ${{ github.REPOSITORY_OWNER }}
 
       - name: Copy generated files to github pages folder
         run: cp repository_statistics.json test/schema_validation

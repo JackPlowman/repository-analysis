@@ -27,12 +27,12 @@ The GitHub Action is designed to be used in a workflow.
 - name: Analyse GitHub repositories
   uses: jackplowman/github-stats-analyser@latest
   with:
-    repository_owner: jackplowman # Put your GitHub username here or use ${{ github.repository_owner }}
+    REPOSITORY_OWNER: jackplowman # Put your GitHub username here or use ${{ github.REPOSITORY_OWNER }}
 ```
 
 ### GitHub Action Inputs
 
 | Name               | Required | Description                                         | Type   | Default               |
 | ------------------ | -------- | --------------------------------------------------- | ------ | --------------------- |
-| `repository_owner` | yes      | The GitHub username of the repositories to analyse. | string | N/A                   |
+| `REPOSITORY_OWNER` | yes      | The GitHub username of the repositories to analyse. | string | N/A                   |
 | `github-token`     | no       | A GitHub token to authenticate API requests.        | string | `${{ github.token }}` |

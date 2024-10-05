@@ -36,11 +36,8 @@ def retrieve_repositories() -> PaginatedList[Repository]:
     Returns:
         PaginatedList[Repository]: The list of repositories.
     """
-    repository_owner = getenv("INPUT_REPOSITORY_OWNER")
-    token = getenv("INPUT_GITHUB_TOKEN")
-    github = Github(token)
-    logger.debug("Using authenticated GitHub API")
-    repositories = github.search_repositories(query=f"user:{repository_owner} archived:false")
+    github = Github(getenv("INPUT_GITHUB_TOKEN"))
+    repositories = github.search_repositories(query=f'user:{getenv("INPUT_REPOSITORY_OWNER")} archived:false')
     logger.info(
         "Found repositories",
         repositories_count=repositories.totalCount,

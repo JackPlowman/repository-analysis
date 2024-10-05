@@ -35,7 +35,7 @@ def test_clone_repo_exists(mock_repo: MagicMock, mock_path: MagicMock) -> None:
 def test_retrieve_repositories(mock_getenv: MagicMock, mock_github: MagicMock) -> None:
     # Arrange
     token = "TestToken"  # noqa: S105
-    mock_getenv.side_effect = ["Test", token]
+    mock_getenv.side_effect = [token, "Test"]
     full_name = "Test3/Test4"
     mock_github.return_value.search_repositories.return_value = search_return = MagicMock(
         totalCount=1, list=[MagicMock(full_name=full_name)]
@@ -44,5 +44,5 @@ def test_retrieve_repositories(mock_getenv: MagicMock, mock_github: MagicMock) -
     repositories = retrieve_repositories()
     # Assert
     mock_github.assert_called_once_with(token)
-    mock_getenv.assert_has_calls([call("INPUT_REPOSITORY_OWNER"), call("INPUT_GITHUB_TOKEN")])
+    mock_getenv.assert_has_calls([call("INPUT_GITHUB_TOKEN"), call("INPUT_REPOSITORY_OWNER")])
     assert repositories == search_return

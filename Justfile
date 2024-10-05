@@ -66,7 +66,7 @@ docker-build:
 # Run the analyser in a Docker container, used for testing the github action docker image
 docker-run:
     docker run \
-      --env github_token=${GITHUB_TOKEN} \
+      --env GITHUB_TOKEN=${GITHUB_TOKEN} \
       --env INPUT_REPOSITORY_OWNER=JackPlowman \
       --volume "$(pwd)/statistics:/statistics" \
       --volume "$(pwd)/cloned_repositories:/cloned_repositories" \
