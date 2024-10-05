@@ -49,20 +49,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Install Python 3.12 with Poetry Cache
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: "pyproject.toml"
-          cache: "poetry"
-
-      - name: Set up Just
-        uses: extractions/setup-just@v2
-
-      - name: Install Poetry Dependencies
-        run: just install
+      - name: Setup Dependencies
+        uses: ./.github/actions/setup-dependencies
 
       - name: Check Python Code Quality (Ruff)
         run: just ruff-lint
