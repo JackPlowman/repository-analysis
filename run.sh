@@ -7,6 +7,9 @@ if [ "$CI" = "true" ]; then
   cd ..
 fi
 
+# Check that the required environment variables are set
+python check_environment_variables.py
+
 # Run the analyser
 python -m analyser
 

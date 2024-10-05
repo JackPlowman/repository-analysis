@@ -52,6 +52,7 @@ docker-build:
 
 docker-run:
     docker run \
+      --env github_token=${GITHUB_TOKEN} \
       --env INPUT_REPOSITORY_OWNER=JackPlowman \
       --volume "$(pwd)/statistics:/statistics" \
       --volume "$(pwd)/cloned_repositories:/cloned_repositories" \
@@ -68,15 +69,19 @@ ruff-fix:
 
 ruff-lint:
     poetry run ruff check analyser
+    poetry run ruff check python_scripts
 
 ruff-lint-fix:
     poetry run ruff check analyser --fix
+    poetry run ruff check python_scripts --fix
 
 ruff-format:
     poetry run ruff format --check analyser
+    poetry run ruff format --check python_scripts
 
 ruff-format-fix:
     poetry run ruff format analyser
+    poetry run ruff format python_scripts
 
 # ------------------------------------------------------------------------------
 # Other Python Tools
