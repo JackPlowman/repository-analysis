@@ -9,6 +9,7 @@ from analyser.utils.github_interactions import clone_repo, retrieve_repositories
 from analyser.utils.repository_actions import remove_excluded_files
 
 logger: stdlib.BoundLogger = get_logger()
+DEFAULT_FILE_LOCATION = "statistics/repository_statistics.json"
 
 
 def create_statistics() -> None:
@@ -27,6 +28,7 @@ def create_statistics() -> None:
         list_of_repositories.append(catalogued_repository)
 
     logger.info("List of repositories", list_of_repositories=list_of_repositories)
+
     DataFrame(
         [
             {
@@ -38,7 +40,8 @@ def create_statistics() -> None:
             }
             for repository in list_of_repositories
         ]
-    ).to_json("statistics/repository_statistics.json", orient="records")
+    ).to_json(DEFAULT_FILE_LOCATION, orient="records")
+    logger.info("Saved statistics to file", file_location=DEFAULT_FILE_LOCATION)
 
 
 def create_repository_statistics(repository_name: str, path_to_repo: str) -> CataloguedRepository:

@@ -13,4 +13,5 @@ python -m analyser
 if [ "$CI" = "true" ]; then
   # if running in GitHub Actions, copy the output to the output directory
   cp statistics/repository_statistics.json github/workspace/repository_statistics.json
+  echo "Copied statistics to github/workspace"
 fi
