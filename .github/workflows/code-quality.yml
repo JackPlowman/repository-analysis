@@ -83,7 +83,7 @@ jobs:
           fetch-depth: 0
 
       - name: Check Markdown links
-        uses: UmbrellaDocs/action-linkspector@v1.2.1
+        uses: UmbrellaDocs/action-linkspector@v1.2.2
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           config_file: .github/other-configurations/.linkspector.yml
