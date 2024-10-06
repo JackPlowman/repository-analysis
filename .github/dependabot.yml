@@ -2,7 +2,9 @@ version: 2
 
 updates:
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directories:
+      - "/"
+      - ".github/actions/setup-dependencies"
     commit-message:
       prefix: "deps(github-actions)"
     schedule:
