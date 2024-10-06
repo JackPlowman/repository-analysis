@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.1.0](https://github.com/JackPlowman/github-stats-analyser/compare/v1.0.1...v1.1.0) (2024-10-06)
+
+
+### 🚀 Features
+
+* Build and Push GitHub Package ([#131](https://github.com/JackPlowman/github-stats-analyser/issues/131)) ([dbbc4df](https://github.com/JackPlowman/github-stats-analyser/commit/dbbc4dfc3d24b35dd908ad052842627def1b3f94)), closes [#132](https://github.com/JackPlowman/github-stats-analyser/issues/132)
+
+
+### 🧰 Maintenance
+
+* Add .dockerignore file ([#108](https://github.com/JackPlowman/github-stats-analyser/issues/108)) ([4f96c7d](https://github.com/JackPlowman/github-stats-analyser/commit/4f96c7dbdcfec75903d0b5605b2c7152c67dc636)), closes [#114](https://github.com/JackPlowman/github-stats-analyser/issues/114)
+* Add environment variable check script ([#126](https://github.com/JackPlowman/github-stats-analyser/issues/126)) ([2596b6f](https://github.com/JackPlowman/github-stats-analyser/commit/2596b6fac63a6359c1a8cf5855cda00290a54d7b)), closes [#125](https://github.com/JackPlowman/github-stats-analyser/issues/125)
+* Create reusable setup-dependencies action ([#123](https://github.com/JackPlowman/github-stats-analyser/issues/123)) ([3ff9743](https://github.com/JackPlowman/github-stats-analyser/commit/3ff9743b228daf09c0d7f4ff8856afb41d30700c)), closes [#124](https://github.com/JackPlowman/github-stats-analyser/issues/124)
+* Group GitHub Actions dependencies in Dependabot config ([#112](https://github.com/JackPlowman/github-stats-analyser/issues/112)) ([2cd5914](https://github.com/JackPlowman/github-stats-analyser/commit/2cd59145acec9d5fd39109737d7d4e1d2f839629)), closes [#117](https://github.com/JackPlowman/github-stats-analyser/issues/117)
+* Refactor statistics file handling and improve logging ([#121](https://github.com/JackPlowman/github-stats-analyser/issues/121)) ([c4a3d9e](https://github.com/JackPlowman/github-stats-analyser/commit/c4a3d9e748d4715c38a1b489e073f908fb57d6b5)), closes [#122](https://github.com/JackPlowman/github-stats-analyser/issues/122)
+* Reorganize and expand Justfile commands ([#127](https://github.com/JackPlowman/github-stats-analyser/issues/127)) ([ad0aa60](https://github.com/JackPlowman/github-stats-analyser/commit/ad0aa607b6b8f6b59a9483c4a8701ef079c92abe)), closes [#128](https://github.com/JackPlowman/github-stats-analyser/issues/128)
+* Standardise environment variable names ([#129](https://github.com/JackPlowman/github-stats-analyser/issues/129)) ([203c593](https://github.com/JackPlowman/github-stats-analyser/commit/203c593782d62ba8277f3f94050b8aef48af2594)), closes [#130](https://github.com/JackPlowman/github-stats-analyser/issues/130)
+* Update GitHub Actions dependencies ([#113](https://github.com/JackPlowman/github-stats-analyser/issues/113)) ([7a51401](https://github.com/JackPlowman/github-stats-analyser/commit/7a514010373f37f802a1ec38fb281b4663037d91)), closes [#118](https://github.com/JackPlowman/github-stats-analyser/issues/118)
+* Update workflows and remove action preview ([#109](https://github.com/JackPlowman/github-stats-analyser/issues/109)) ([db4bf42](https://github.com/JackPlowman/github-stats-analyser/commit/db4bf4208b80c044b27f6792c2bbbe337dcf2521)), closes [#115](https://github.com/JackPlowman/github-stats-analyser/issues/115)
+
 ## [1.0.1](https://github.com/JackPlowman/github-stats-analyser/compare/v1.0.0...v1.0.1) (2024-10-01)
 
 
