@@ -7,7 +7,9 @@
   - [Introduction](#introduction)
   - [Usage](#usage)
     - [GitHub Action Example](#github-action-example)
+    - [GitHub Action Pre-built Image](#github-action-pre-built-image)
     - [GitHub Action Inputs](#github-action-inputs)
+  - [License](#license)
 
 ## Introduction
 
@@ -30,9 +32,27 @@ The GitHub Action is designed to be used in a workflow.
     REPOSITORY_OWNER: jackplowman # Put your GitHub username here or use ${{ github.REPOSITORY_OWNER }}
 ```
 
+> [!TIP]
+> It's recommended to use the pre-built Docker image as it will be faster to install.
+
+### GitHub Action Pre-built Image
+
+You can use the pre-built Docker image by adding the following to your workflow:
+
+```yaml
+- name: GitHub Stats Analyser
+      uses: docker://ghcr.io/jackplowman/github-stats-analyser:v1.1.0
+      with:
+        GITHUB_TOKEN: ${{ inputs.token }}
+```
+
 ### GitHub Action Inputs
 
 | Name               | Required | Description                                         | Type   | Default               |
 | ------------------ | -------- | --------------------------------------------------- | ------ | --------------------- |
 | `REPOSITORY_OWNER` | yes      | The GitHub username of the repositories to analyse. | string | N/A                   |
-| `github-token`     | no       | A GitHub token to authenticate API requests.        | string | `${{ github.token }}` |
+| `GITHUB_TOKEN`     | no       | A GitHub token to authenticate API requests.        | string | `${{ github.token }}` |
+
+## License
+
+[MIT](https://github.com/jackplowman/github-stats-analyser/blob/master/LICENSE)
