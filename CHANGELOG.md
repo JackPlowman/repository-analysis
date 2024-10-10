@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.1](https://github.com/JackPlowman/github-stats-analyser/compare/v1.1.0...v1.1.1) (2024-10-10)
+
+
+### 📝 Documentation
+
+* Update README with pre-built image and license info ([#136](https://github.com/JackPlowman/github-stats-analyser/issues/136)) ([9ddc6f9](https://github.com/JackPlowman/github-stats-analyser/commit/9ddc6f9399e838d82b4b879477fef7538275d555)), closes [#137](https://github.com/JackPlowman/github-stats-analyser/issues/137)
+
+
+### 🧰 Maintenance
+
+* Add setup-dependencies directory to Dependabot config ([#133](https://github.com/JackPlowman/github-stats-analyser/issues/133)) ([44ec79d](https://github.com/JackPlowman/github-stats-analyser/commit/44ec79de162eb6d70ba4dab711a28d4e9e079469)), closes [#134](https://github.com/JackPlowman/github-stats-analyser/issues/134)
+* Bump Python Version to Python 3.13 ([#140](https://github.com/JackPlowman/github-stats-analyser/issues/140)) ([3135efc](https://github.com/JackPlowman/github-stats-analyser/commit/3135efc7ab40db35202ab7e6aa87948b686a52c4)), closes [#139](https://github.com/JackPlowman/github-stats-analyser/issues/139)
+
 ## [1.1.0](https://github.com/JackPlowman/github-stats-analyser/compare/v1.0.1...v1.1.0) (2024-10-06)
 
 
